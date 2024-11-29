@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استكشاف العالم</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; 
+            color: #ff69b4;
+        }
+        .header {
+            background: #444;
+            color: #ff69b4; 
+            padding: 20px;
+            text-align: center;
+        }
+        .nav a {
+            color: #ff69b4; 
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .destination {
+            background-color: #222; 
+            border-radius: 8px;
+            display: flex;
+            flex-direction: row; 
+            text-align: right;
+            overflow: hidden;
+        }
+        .destination img {
+            width: 100px; 
+            height: 100px;
+            margin-left: 15px; 
+        }
+        .details {
+            flex: 1; 
+            padding: 15px;
+            background: #333; 
+        }
+        .destination h2 {
+            margin: 0;
+            font-size: 1.2em; 
+        }
+        .destination p {
+            margin: 5px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #444; 
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>استكشاف العالم</h1>
+    <nav class="nav">
+        <a href="#">الرئيسية</a>
+        <a href="#">وجهات</a>
+        <a href="#">نصائح السفر</a>
+        <a href="#">اتصل بنا</a>
+    </nav>
+</div>
+
+<div class="container" align="center">
+    <h1>أفضل الوجهات السياحية</h1>
+    
+    <div class="destination" onclick="toggleDetails('details-egypt')">
+        <div class="details">
+            <h2>مصر</h2>
+            <p>استمتع بزيارة الأهرامات والمعابد الفرعونية.</p>
+            <div id="details-egypt" class="details" style="display: none;">
+                <p>السعر: 500 دولار للسفر و 100 دولار لليلة في الفندق.</p>
+                <p>رقم الهاتف: 0123456789</p>
+                <p>عدد الأيام: 7 أيام.</p>
+                <p>مصر، بلد الحضارة القديمة، تضم الأهرامات الشهيرة وأبو الهول.</p>
+            </div>
+        </div>
+        <img src="https://www.traveloffpath.com/wp-content/uploads/2023/07/karnak-in-luxor-at-sunset.jpeg.webp" alt="مصر">
+    </div>
+    
+    <div class="destination" onclick="toggleDetails('details-uae')">
+        <div class="details">
+            <h2>الإمارات</h2>
+            <p>اكتشف مدن حديثة وجمال الصحراء.</p>
+            <div id="details-uae" class="details" style="display: none;">
+                <p>السعر: 700 دولار للسفر و 150 دولار لليلة في الفندق.</p>
+                <p>رقم الهاتف: 0987654321</p>
+                <p>عدد الأيام: 5 أيام.</p>
+                <p>الإمارات، موطن دبي وأبوظبي، تقدم مزيجاً من الحداثة والتقاليد.</p>
+            </div>
+        </div>
+        <img src="https://www.state.gov/wp-content/uploads/2023/07/shutterstock_2150000389v2-768x512.jpg" alt="الإمارات">
+    </div>
+
+    <div class="destination" onclick="toggleDetails('details-bali')">
+        <div class="details">
+            <h2>بالي، إندونيسيا</h2>
+			<p>استمتع بالشواطئ الجميلة والثقافة الغنية.</p>
+            <div id="details-bali" class="details" style="display: none;">
+                <p>السعر: 800 دولار للسفر و 120 دولار لليلة في الفندق.</p>
+                <p>رقم الهاتف: 1234567890</p>
+                <p>عدد الأيام: 6 أيام.</p>
+                <p>بالي جزيرة ساحرة مع شواطئها الرائعة ومعابدها الفريدة.</p>
+            </div>
+        </div>
+        <img src="https://www.travelonline.com/bali/beaches/beach-114814-ws.jpg" alt="بالي">
+    </div>
+
+    <div class="destination" onclick="toggleDetails('details-rome')">
+        <div class="details">
+            <h2>روما، إيطاليا</h2>
+            <p>استمتع بتاريخ عريق ومعالم سياحية مدهشة.</p>
+            <div id="details-rome" class="details" style="display: none;">
+                <p>السعر: 600 دولار للسفر و 130 دولار لليلة في الفندق.</p>
+                <p>رقم الهاتف: 2345678901</p>
+                <p>عدد الأيام: 4 أيام.</p>
+                <p>روما، مدينة الأبد، تعتبر موطناً للعديد من المعالم السياحية.</p>
+            </div>
+        </div>
+        <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/129000/129821-Timisoara.jpg" alt="روما">
+    </div>
+
+    <div class="destination" onclick="toggleDetails('details-nz')">
+        <div class="details">
+            <h2>نيوزيلندا</h2>
+            <p>استمتع بالطبيعة الخلابة والمغامرات في الهواء الطلق.</p>
+            <div id="details-nz" class="details" style="display: none;">
+                <p>السعر: 900 دولار للسفر و 140 دولار لليلة في الفندق.</p>
+                <p>رقم الهاتف: 3456789012</p>
+                <p>عدد الأيام: 10 أيام.</p>
+                <p>نيوزيلندا تقدم مناظر طبيعية مذهلة، من الشواطئ إلى الجبال.</p>
+            </div>
+        </div>
+        <img src="https://res.cloudinary.com/zicasso/image/fetch/c_fill,f_auto,g_auto,h_576,q_auto,w_865/https://images.zicasso.com/b9a1d7b9f399eac21e963d0cc7599001.jpg" alt="نيوزيلندا">
+    </div>
+
+    <div class="destination" onclick="toggleDetails('details-greece')">
+        <div class="details">
+            <h2>اليونان</h2>
+            <p>استمتع بالثقافة اليونانية والمعمار الكلاسيكي.</p>
+            <div id="details-greece" class="details" style="display: none;">
+                <p>السعر: 650 دولار للسفر و 110 دولار لليلة في الفندق.</p>
+                <p>رقم الهاتف: 4567890123</p>
+                <p>عدد الأيام: 7 أيام.</p>
+                <p>اليونان معروفة بجزرها الجميلة ومعابدها القديمة.</p>
+            </div>
+        </div>
+        <img src="https://th.bing.com/th/id/R.aa552eecd2c3ac413d8cf559b417807d?rik=BrP5sYDEkHhQqQ&pid=ImgRaw&r=0" alt="اليونان">
+    </div>
+</div>
+
+<div class="footer">
+	    <p>DIRECTED BY  :<BR>
+		ZAINAB ALI <BR>
+		SAJAD ALAA<BR>
+		ALI ZGHEIR<BR>
+		RUQAYA ASAAD<BR>
+		TUQAA ALAA <BR>
+		ZAINAB HASHEM<BR>
+		&copy; 2024</p>
+
+</div>
+
+<script>
+    function toggleDetails(destinationId) {
+        const details = document.getElementById(destinationId);
+        details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+
+</body>
+</html>
